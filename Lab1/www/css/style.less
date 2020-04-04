@@ -1,0 +1,281 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// ------------------ !!! ОБЩАЯ ЧАСТЬ !!! ------------------- //
+
+body {
+    color: #7f7f7f;
+    font-size: 12px;
+    font-family: Arial;
+    background-color: #f9f9f9;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 230px 20px repeat(3, 1fr);
+    
+    header.header-box {
+        background-color: #fff;
+        padding: 47px 28px;
+        box-sizing: border-box;
+
+        a.logo {
+            margin-bottom: 35px;
+            display: inline-block;
+        }
+
+        nav {
+            font-family: 'Oswald', sans-serif;
+            color: black;
+            text-transform: uppercase;
+            font-size: 16px;
+            line-height: 33px;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                transition: all 300ms ease-in-out;
+
+                &:hover {
+                    color: rgb(255, 168, 0);
+                    transition: all 300ms ease-in-out;
+                }
+            }
+        }
+    }
+
+    .image-box {
+        position: relative;
+
+        &:hover {
+            .mask {
+                opacity: 1;
+                transition: all 300ms ease-in-out;
+            }
+        }
+
+        .mask {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 168, 0, 0.8);
+            opacity: 0;
+            transition: all 300ms ease-in-out;
+        }
+        .info-box {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding-bottom: 43px;
+            text-align: center;
+
+            h2 {
+                font-family: 'Oswald', sans-serif;
+                font-size: 30px;
+                line-height: 30px;
+                font-weight: 700;
+                margin-bottom: 14px;
+                text-transform: uppercase;
+                color: #fff;
+            }
+            p {
+                text-align: center;
+                margin-bottom: 0;
+                color: #fff;
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 7px 19px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 18px;
+    font-family: 'Oswald', sans-serif;
+    background-color: #ffa800;
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+        background-color: #000;
+        transition: all 300ms ease-in-out;
+    }
+}
+
+// ------------------ !!! ЧАСТЬ ГЛАВНОЙ ФОРМЫ !!! ------------------- //
+
+.index-wrapper {
+	max-width: 1280px;
+	width: ~"calc(100% - 40px)";
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto minmax(467px, auto) minmax(16px, auto) auto;
+    grid-row-gap: 35px;
+    
+    .stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: #fff url(img/background1.jpg) no-repeat center center;
+        background-size: cover;
+
+        .info {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto auto;
+            padding: 70px;
+            box-sizing: border-box;
+
+            .stats1, .stats2, .stats3 {
+                text-align: center;
+                .number {
+                    color: #ffa800;
+                    font-size: 81px;
+                    line-height: 81x;
+                    font-weight: 300;
+                    display: block;
+                    font-family: 'Oswald', sans-serif;
+                }
+
+                .description {
+                    font-size: 12px;
+                    color: #7f7f7f;
+                }
+            }
+
+            .info-block {
+                grid-column-start: 1;
+                grid-column-end: 4;
+
+                h3 {
+                    color: black;
+                    font-family: 'Oswald', sans-serif;
+                    font-size: 21px;
+                    line-height: 21px;
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                }
+
+                p{
+                    margin-bottom: 0;
+                    color: #7f7f7f;
+                    font-size: 11px;
+                    line-height: 14px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .video {
+            padding: 10%;
+            video {
+                height: 100%;
+                width: 100%;
+            } 
+        }
+    }
+
+    .title {
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+        line-height: 18px;
+        background-color: #fff;
+        padding: 7px 19px;
+        .quote {
+            font-size: 20px;
+            color: black;
+            margin: 5px;
+        }
+        .author {
+            font-size: 16px;
+            color: #7f7f7f;
+            margin: 5px;
+        }
+    }
+    
+    .gallery {
+        display: grid;
+        background-color: #fff;
+        grid-template-columns: 360px 1fr 1fr;
+        grid-template-rows: 370px 370px;
+        grid-gap: 19px;
+
+        .gallery-block:nth-child(2) {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+        .gallery-block:nth-child(1) {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        .gallery-block {
+            border: 1px #000 solid;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    .wrapper .header {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto;
+    }
+}
