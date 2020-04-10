@@ -1,0 +1,73 @@
+.services-wrapper {
+    max-width: 1280px;
+	width: ~"calc(100% - 40px)";
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr;
+    grid-row-gap: 35px;
+
+    .services-list {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        grid-gap: 30px;
+        line-height: 18px;
+        font-family: 'Oswald', sans-serif;
+        color: honeydew;
+        background-color: rgb(199, 157, 157);
+
+        .services-list-title {
+            height: auto;
+            padding: 5px;
+            background-color: rgb(201, 119, 119);
+            line-height: 50px;
+            font-size: 50px;
+        }
+ 
+        .services-list-items {
+            display: inline;
+            padding:0;
+            list-style: none;
+        }
+        .services-list-items li{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: 1fr;
+            background-color: rgb(201, 119, 119);
+            margin-top: 6px;
+            padding: 6px;
+            .service {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                grid-template-rows: 1fr;
+                .service-name {
+                    font-size: 20px;
+                }
+                .service-deskription {
+                    padding-left: 10px;
+                }
+                .service-price {
+                    font-size: 15px;
+                }
+            }
+        }
+        .services-list-items li:hover {
+            background-color: rgb(206, 78, 78);
+            transition-duration: 0.5s;
+        }
+        .services-list-items li:before {
+            //background-color: rgb(206, 78, 78);
+            padding-right:10px;
+            font-weight: bold;
+            color: #C0C0C0;
+            content: "\2714";
+            transition-duration: 0.5s;
+        }
+        .services-list-items li:hover:before {
+            color: #337AB7;
+            content: "\2714";
+        }    
+    }
+}
