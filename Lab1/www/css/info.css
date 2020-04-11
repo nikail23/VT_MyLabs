@@ -1,0 +1,73 @@
+.info-wrapper {
+  max-width: 1280px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-row-gap: 35px;
+}
+.info-wrapper .info-list {
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 7%;
+}
+.info-wrapper .info-list .info-list-name {
+  text-align: center;
+  font-size: 30px;
+}
+.info-wrapper .info-list .info-list-item {
+  padding: 5px;
+  margin: 15px 0;
+}
+.info-wrapper .info-list .info-list-item input,
+.info-wrapper .info-list .info-list-item p {
+  display: none;
+}
+.info-wrapper .info-list .info-list-item input[type=checkbox]:checked ~ p {
+  display: block;
+  color: #444;
+  font-size: 1em;
+  text-overflow: clip;
+  white-space: normal;
+  overflow: visible;
+}
+.info-wrapper .info-list .info-list-item label {
+  font-size: 1.2em;
+  cursor: pointer;
+  background: #eee;
+  display: block;
+  position: relative;
+  padding: 7px 10px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-left: 3px solid #888;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  transition: all 0.15s ease-out;
+}
+.info-wrapper .info-list .info-list-item label::selection {
+  background: none;
+}
+.info-wrapper .info-list .info-list-item label:hover {
+  background: #f5f5f5;
+}
+.info-wrapper .info-list .info-list-item input[type=checkbox]:checked ~ label {
+  border-color: #ff7f50;
+  background: #f5deb4;
+  background-image: linear-gradient(to bottom, #fff, #f5deb4);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+}
+.info-wrapper .info-list .info-list-item label::before {
+  content: '';
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  margin-top: -6px;
+  border: 6px solid transparent;
+  border-left-color: inherit;
+}
+.info-wrapper .info-list .info-list-item input[type=checkbox]:checked ~ label::before {
+  border: 6px solid transparent;
+  border-top-color: inherit;
+  margin-top: -3px;
+  right: 10px;
+}
