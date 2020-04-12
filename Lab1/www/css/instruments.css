@@ -70,3 +70,9 @@
 .instruments-wrapper .instruments-list .product-item:hover .button {
   background: #fc5a5a;
 }
+@media all and (max-width: 767px) {
+  .instruments-wrapper .instruments-list {
+    display: flex;
+    flex-direction: column;
+  }
+}

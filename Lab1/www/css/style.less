@@ -270,12 +270,18 @@ img {
             }
         }
     }
+
+    @media all and (max-width: 767px) {
+        .gallery, .stats {
+            display: inline-flex;
+            flex-direction: column;
+        }
+    }
 }
 
-@media screen and (max-width: 1000px)
-{
-    .wrapper .header {
-        grid-template-columns: 100%;
-        grid-template-rows: auto auto auto auto auto;
+@media all and (max-width: 767px) {
+    .header {
+        display: inline-flex;
+        flex-direction: column;
     }
 }

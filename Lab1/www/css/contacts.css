@@ -17,14 +17,20 @@
   margin-right: auto;
   margin-bottom: 7%;
   font-family: 'Oswald', sans-serif;
+  text-align: center;
 }
 .contacts-wrapper .contacts-list .contacts-list-name {
   padding: 10px;
   grid-column-start: 1;
   grid-column-end: 3;
   font-size: 45px;
-  text-align: center;
   color: #ffa800;
+}
+.contacts-wrapper .contacts-list .contact {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: 1fr;
+  text-align: center;
 }
 .contacts-wrapper .contacts-list .contact .kesednsoled:after,
 .contacts-wrapper .contacts-list .contact .kesednsoled:before {
@@ -39,6 +45,10 @@
   clear: both;
 }
 .contacts-wrapper .contacts-list .contact .ico-wrap {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
   color: #ffa800;
   width: 48px;
   height: 48px;
@@ -63,13 +73,9 @@
   line-height: 1;
   margin-bottom: 8px;
 }
-@media (max-width: 767px) {
-  .contacts-wrapper .meanous-andscoev,
-  .contacts-wrapper .ico-wrap {
-    float: none;
-    text-align: center;
-  }
-  .contacts-wrapper .ico-wrap {
-    margin: 0 auto 15px auto;
+@media all and (max-width: 767px) {
+  .contacts-wrapper .contacts-list {
+    display: flex;
+    flex-direction: column;
   }
 }

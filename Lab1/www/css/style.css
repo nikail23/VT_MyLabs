@@ -325,9 +325,16 @@ img {
   height: 100%;
   width: 100%;
 }
-@media screen and (max-width: 1000px) {
-  .wrapper .header {
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto;
+@media all and (max-width: 767px) {
+  .index-wrapper .gallery,
+  .index-wrapper .stats {
+    display: inline-flex;
+    flex-direction: column;
+  }
+}
+@media all and (max-width: 767px) {
+  .header {
+    display: inline-flex;
+    flex-direction: column;
   }
 }
