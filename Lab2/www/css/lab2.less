@@ -1,0 +1,29 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    .referencesList {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    .myForm {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        padding: 10px;
+    }
+}
+
+.passiveReferenceState {
+    color: black;
+}
+
+.activeReferenceState {
+    color: red;
+}
