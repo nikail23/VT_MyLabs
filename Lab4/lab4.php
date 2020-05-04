@@ -109,7 +109,7 @@
             <pre>
                 <?php 
                     if ($editableText != '')
-                        echo $editableText 
+                        echo $editableText;
                 ?>
             </pre>
             Введите слово/словосочетание для поиска: <input name="searchText" type="text">
