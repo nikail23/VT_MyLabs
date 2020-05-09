@@ -1,0 +1,14 @@
+.wrapper {
+  padding: 10px;
+}
+.wrapper .myForm {
+  text-align: justify;
+}
+.confirmInputComponent {
+  color: black;
+  background-color: white;
+}
+.declineInputComponent {
+  color: #ffffff;
+  background-color: #ff0000;
+}
