@@ -1,0 +1,12 @@
+table {
+  color: white;
+}
+table th {
+  background-color: #40854b;
+  border: 1px solid white;
+}
+table td {
+  vertical-align: text-top;
+  background-color: #55468b;
+  border: 1px solid white;
+}

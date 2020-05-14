@@ -1,0 +1,3 @@
+<?php
+    showDatabaseTable($tableName, $databaseLink);
+?>
