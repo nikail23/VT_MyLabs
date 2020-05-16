@@ -1,5 +1,9 @@
 <?php 
-    require_once('phpmailer/PHPMailerAutoload.php');
+    use PHPMailer\PHPMailer\PHPMailer;
+
+    include "consts.php";
+    require ComposerAutoloadPath;
+
     $mail = new PHPMailer;
     $mail->CharSet = 'utf-8';
 
