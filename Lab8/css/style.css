@@ -1,0 +1,12 @@
+.scroll-div {
+  height: 300px;
+  width: 500px;
+  border: 2px solid #000;
+  overflow: scroll;
+}
+td.table-item {
+  padding-left: 3px;
+  font-size: 9pt;
+  padding-top: 2px;
+  font-family: Arial;
+}
